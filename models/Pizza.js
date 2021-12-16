@@ -25,6 +25,7 @@ const PizzaSchema = new Schema({
     //ref tell the Pizza model which documents to search to find the right comments
     comments:[
       {
+        //The ref property tells Mongoose to expect an ObjectId and to tell it that its data comes from the Comment model.
         type: Schema.Types.ObjectId,
         ref: 'Comment'
       }
